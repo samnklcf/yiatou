@@ -1,0 +1,88 @@
+.en-tete {
+    width: 100%;
+    max-width: $max-width;
+    height: 61px;
+    background: #fff;
+    box-shadow: $shadow-nav;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+
+    .contente {
+        width: 100%;
+        max-width: $max-screen;
+        height: 100%;
+        margin: auto;
+        padding: 10px;
+        padding-right: 20px;
+
+        a {
+            color: #000;
+            transition: .5s;
+
+            svg {
+                width: 27px;
+            }
+
+            &:hover {
+                color: $main-color;
+            }
+        }
+
+        &.addDemande,
+        &.business {
+            display: grid;
+            grid-template-columns: 20px 1fr 20px;
+            align-items: center;
+            gap: 10px;
+            // background-color: orange;
+
+            h1 {
+                padding-top: 8px;
+                color: $main-color;
+
+                font: {
+                    weight: bold;
+                    size: 1.3em;
+                }
+
+                ;
+            }
+        }
+
+        &.notif {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h1 {
+                font-size: 1.4em;
+                color: $main-color;
+                font-weight: bold;
+            }
+        }
+
+        &.home,
+        &.boutique {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h1 {
+                color: $main-color;
+                font-size: 1.4em;
+                font-weight: bold;
+            }
+
+            .icones {
+                width: 66px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+        }
+    }
+}
